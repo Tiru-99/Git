@@ -75,17 +75,6 @@ int main(int argc, char *argv[])
         std::string file_path = "./git/objects/" + sha_dir + "/" + sha_filename;
 
         std::cout << "The file path is " << file_path << std::endl;
-
-        // check if the file exists or not
-        if (std::filesystem::exists(file_path))
-        {
-            std::cout << "File exists!\n";
-        }
-        else
-        {
-            std::cout << "File does not exist!\n";
-        }
-
         // decompressing the file using zstr a open source tool for zlib algo
         zstr::ifstream input(file_path, std::ofstream::binary);
         // check
