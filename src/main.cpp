@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
         //get the file path 
         std::string file_path = ".git/objects/" + sha_dir + "/" + sha_filename;
 
-        std::cout << "The file path is " << file_path << std::endl;
+        // std::cout << "The file path is " << file_path << std::endl;
         // decompressing the file using zstr a open source tool for zlib algo
         zstr::ifstream input(file_path, std::ofstream::binary);
         // check
@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
         input.close();
 
         //  blob 11\0hello world -> format
-        const auto object_content = object_str.substr(object_str.find("\0") + 1);
+        const auto object_content = object_str.substr(object_str.find('\0') + 1);
         std::cout << object_content << std::flush;
     }
     else
