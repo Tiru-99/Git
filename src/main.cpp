@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
         std::string sha_filename = sha.substr(2); // gets the remaining 38 words
 
         //get the file path 
-        std::string file_path = "./git/objects/" + sha_dir + "/" + sha_filename;
+        std::string file_path = ".git/objects/" + sha_dir + "/" + sha_filename;
 
         std::cout << "The file path is " << file_path << std::endl;
         // decompressing the file using zstr a open source tool for zlib algo
